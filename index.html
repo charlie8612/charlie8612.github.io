@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yu (Charlie) Chan</title>
+<meta name="description" content="Yu (Charlie) Chan — tactile representation learning and robot manipulation. Research Assistant, Robot Learning Lab, National Taiwan University.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1d21; --muted:#5b6470; --line:#e6e8eb;
+    --accent:#0d5f8a; --card:#f6f7f8; --tag:#eef2f5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171a; --fg:#e8eaed; --muted:#9aa4af; --line:#2a2f35;
+           --accent:#6db3d6; --card:#1c2126; --tag:#232930; }
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--fg);
+       font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+       padding:3rem 1.25rem 5rem}
+  main{max-width:46rem; margin:0 auto}
+  h1{font-size:1.9rem; letter-spacing:-.02em}
+  .tagline{color:var(--muted); margin-top:.35rem}
+  .contact{margin-top:.8rem; font-size:.95rem}
+  .contact a{margin-right:1.1rem}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  section{margin-top:2.6rem}
+  h2{font-size:1.15rem; text-transform:uppercase; letter-spacing:.08em;
+     border-bottom:1px solid var(--line); padding-bottom:.4rem; margin-bottom:1rem}
+  p + p{margin-top:.7rem}
+  .pub{margin-bottom:1.1rem}
+  .pub .title{font-weight:600}
+  .pub .authors, .pub .venue{color:var(--muted); font-size:.95rem}
+  .pub .venue em{font-style:italic}
+  .me{font-weight:600; color:var(--fg)}
+  .item{display:flex; gap:1rem; margin-bottom:1.15rem}
+  .item .date{flex:0 0 9.5rem; color:var(--muted); font-size:.92rem; padding-top:.15rem}
+  .item .body .role{font-weight:600}
+  .item .body .org{color:var(--muted); font-size:.95rem}
+  .item .body .desc{margin-top:.25rem; font-size:.95rem}
+  .cards{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1rem 1.1rem}
+  .card h3{font-size:1rem; margin-bottom:.35rem}
+  .card p{font-size:.92rem; color:var(--muted)}
+  .tags{margin-top:.6rem}
+  .tag{display:inline-block; background:var(--tag); border-radius:5px;
+       font-size:.78rem; padding:.12rem .5rem; margin:.15rem .25rem 0 0; color:var(--muted)}
+  footer{margin-top:4rem; color:var(--muted); font-size:.85rem}
+  @media (max-width:640px){
+    .cards{grid-template-columns:1fr}
+    .item{flex-direction:column; gap:.1rem}
+    .item .date{flex:none}
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Yu (Charlie) Chan</h1>
+    <p class="tagline">Research Assistant, Robot Learning Lab, National Taiwan University<br>
+    Tactile representation learning · robot manipulation</p>
+    <p class="contact">
+      <a href="mailto:charlie88162@gmail.com">Email</a>
+      <a href="https://github.com/charlie8612">GitHub</a>
+      <!-- <a href="https://scholar.google.com/citations?user=ID">Google Scholar</a> -->
+      <a href="cv.pdf">CV</a>
+    </p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I infer hidden physical state from indirect, non-visual sensing, and use that inference to make
+    robot manipulation robust under real-world uncertainty. My earlier work recovered hidden
+    <em>spatial</em> state from Wi-Fi signals; my current work recovers hidden <em>contact</em> state
+    from touch — the same problem, applied where it matters most for manipulation reliability.</p>
+    <p>At the Robot Learning Lab (advisor: Prof. Shao-Hua Sun), I led the real-world experiments for our
+    CoRL 2026 submission on video-replanning-based implicit state estimation. My ongoing research asks
+    whether the perception-level gains reported in tactile representation learning actually survive to
+    the policy level — using unpaired onboarding of new tactile sensors as a controlled way to vary
+    representations.</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pub">
+      <div class="title">Implicit State Estimation via Video Replanning</div>
+      <div class="authors">Po-Chen Ko, <span class="me">Yu Chan</span>, Jiayuan Mao, Yu-Hsiang Fu,
+        Hsien-Jeng Yeh, Chu-Rong Chen, Wei-Chiu Ma, Yilun Du, Shao-Hua Sun</div>
+      <div class="venue">Under review at <em>CoRL 2026</em> ·
+        <a href="https://arxiv.org/abs/2510.17315">arXiv:2510.17315</a> ·
+        led all real-world robot experiments</div>
+    </div>
+    <div class="pub">
+      <div class="title">Learning-Based WiFi Fingerprint Inpainting via Generative Adversarial Networks</div>
+      <div class="authors"><span class="me">Yu Chan</span>, Pei-Yuan Lin, Yu-Yun Tseng, Jen-Jee Chen, Yu-Chee Tseng</div>
+      <div class="venue"><em>IEEE ICCCN 2024</em> · first author</div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Selected Work</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Real-robot evaluation for video replanning</h3>
+        <p>Built the physical evaluation stack and ran the real-robot experiments and ablations
+        for the CoRL 2026 submission, extending an algorithmic contribution into physically
+        validated results.</p>
+        <div class="tags"><span class="tag">robot manipulation</span><span class="tag">LeRobot</span><span class="tag">real-robot eval</span></div>
+      </div>
+      <div class="card">
+        <h3>Tactile representation → policy transfer</h3>
+        <p>Do perception-level gains of tactile encoders survive to policy-level success?
+        Measuring the correlation with controlled representation variation from unpaired
+        onboarding of new tactile sensors.</p>
+        <div class="tags"><span class="tag">tactile sensing</span><span class="tag">representation learning</span><span class="tag">policy learning</span></div>
+      </div>
+      <div class="card">
+        <h3>Wi-Fi ranging firmware (MediaTek)</h3>
+        <p>Owned the Fine Timing Measurement feature on production Wi-Fi chipsets:
+        rebuilt the ranging firmware, improving distance accuracy from 2–3 m to within 1 m.
+        Represented MediaTek at Wi-Fi Alliance PlugFest.</p>
+        <div class="tags"><span class="tag">firmware</span><span class="tag">Wi-Fi</span><span class="tag">localization</span></div>
+      </div>
+      <div class="card">
+        <h3>Embedded real-time SELD (Novatek)</h3>
+        <p>Designed and optimized a dual-channel sound event localization and detection model
+        and its inference pipeline for low-latency deployment on embedded systems.</p>
+        <div class="tags"><span class="tag">embedded ML</span><span class="tag">audio</span><span class="tag">model optimization</span></div>
+      </div>
+      <div class="card">
+        <h3>GAN-based Wi-Fi fingerprint inpainting</h3>
+        <p>M.S. thesis: zero-shot fingerprint inpainting with a shared-weight discriminator,
+        improving indoor positioning accuracy by 20% over benchmarks; deployed in a
+        real-world industrial collaboration.</p>
+        <div class="tags"><span class="tag">GAN</span><span class="tag">indoor positioning</span></div>
+      </div>
+      <div class="card">
+        <h3>Tera Thinker — AI tutoring platform</h3>
+        <p>Co-founded an AI education startup: adaptive question recommendation, knowledge
+        tracing, and automated essay scoring, adopted by 20+ high schools in Taiwan.</p>
+        <div class="tags"><span class="tag">knowledge tracing</span><span class="tag">LLM</span><span class="tag">co-founder</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opensource">
+    <h2>Open Source &amp; Hands-On</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Upstream contribution to Hugging Face LeRobot</h3>
+        <p>Contributed Dynamixel motor support (XH540-W150, XC330-T288/T181) merged into
+        <a href="https://github.com/huggingface/lerobot/pull/3815">huggingface/lerobot #3815</a>,
+        enabling new leader/follower hardware across the LeRobot ecosystem.</p>
+        <div class="tags"><span class="tag">open source</span><span class="tag">LeRobot</span><span class="tag">Dynamixel</span></div>
+      </div>
+      <div class="card">
+        <h3>LeRobot hardware plugins</h3>
+        <p>Authored and published three plugins:
+        <a href="https://github.com/charlie8612/lerobot_robot_piper">AgileX Piper follower</a>
+        (safety-first: no startup lunge, slew-rate limiting),
+        <a href="https://github.com/charlie8612/lerobot_teleoperator_omy">ROBOTIS OMY-L100 leader</a>
+        (direct Dynamixel Protocol 2.0, no ROS&nbsp;2), and an
+        <a href="https://github.com/charlie8612/lerobot_omy_piper_retarget">OMY→Piper retargeting processor</a>
+        for cross-embodiment teleoperation.</p>
+        <div class="tags"><span class="tag">hardware integration</span><span class="tag">CAN bus</span><span class="tag">teleoperation</span></div>
+      </div>
+      <div class="card">
+        <h3>Lab imitation-learning infrastructure</h3>
+        <p>Built <a href="https://github.com/charlie8612/RLLxLerobot">RLLxLerobot</a>, the lab&rsquo;s
+        end-to-end imitation-learning stack: teleoperation, dataset recording, training and evaluation
+        scripts, waypoint tooling, hardware/udev configuration, and full internal documentation.</p>
+        <div class="tags"><span class="tag">infrastructure</span><span class="tag">imitation learning</span><span class="tag">real robot</span></div>
+      </div>
+      <div class="card">
+        <h3>3D printing &amp; fabrication</h3>
+        <p>Designed and fabricated the physical experimental setups for the lab&rsquo;s real-robot
+        research — custom fixtures, mounts, and task objects used in the CoRL 2026 submission&rsquo;s
+        experiments (in-lab hardware). A published sample design:
+        <a href="https://makerworld.com/zh/models/3200034-cube-earring">Cube Earring</a> on MakerWorld.</p>
+        <div class="tags"><span class="tag">3D printing</span><span class="tag">CAD</span><span class="tag">rapid prototyping</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item"><div class="date">Mar 2026 – present</div>
+      <div class="body"><div class="role">Research Assistant</div>
+        <div class="org">Robot Learning Lab, National Taiwan University</div></div></div>
+    <div class="item"><div class="date">Nov 2024 – Mar 2026</div>
+      <div class="body"><div class="role">AI Application Engineer</div>
+        <div class="org">Novatek</div></div></div>
+    <div class="item"><div class="date">Sep 2022 – Nov 2024</div>
+      <div class="body"><div class="role">Wi-Fi R&amp;D Software Engineer</div>
+        <div class="org">MediaTek</div></div></div>
+    <div class="item"><div class="date">Jan 2021 – present</div>
+      <div class="body"><div class="role">Co-Founder</div>
+        <div class="org">Tera Thinker</div></div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item"><div class="date">2020 – 2022</div>
+      <div class="body"><div class="role">M.S. in Artificial Intelligence</div>
+        <div class="org">National Yang Ming Chiao Tung University · GPA 4.26/4.30 · Presidential Award</div>
+        <div class="desc">Exchange semester at University of Agder, Norway (Spring 2022)</div></div></div>
+    <div class="item"><div class="date">2015 – 2019</div>
+      <div class="body"><div class="role">B.S. in Electrical Engineering and Computer Science</div>
+        <div class="org">National Tsing Hua University</div></div></div>
+  </section>
+
+  <footer>© 2026 Yu (Charlie) Chan</footer>
+</main>
+</body>
+</html>
