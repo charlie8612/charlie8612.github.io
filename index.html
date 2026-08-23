@@ -5,7 +5,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="Yu (Charlie) Chan">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yu (Charlie) Chan — robot learning and manipulation under real-world uncertainty. Research Assistant, Robot Learning Lab, National Taiwan University.">
+  <meta name="description" content="Yu (Charlie) Chan — robot learning and manipulation. Research Assistant, Robot Learning Lab, National Taiwan University.">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <style>
     a{color:#1772d0;text-decoration:none}
@@ -30,9 +30,8 @@
           <strong>Seeking PhD position for 2027 Fall!</strong>
           I am a research assistant at the <a href="https://rll.netlify.app/">Robot Learning Lab</a>,
           National Taiwan University, advised by <a href="https://shaohua0116.github.io/">Prof. Shao-Hua Sun</a>.
-          I am interested in robot learning and manipulation — in particular, how robots can act
-          robustly when the physical state that matters (contact, object properties, dynamics) is not
-          directly observable.
+          I am broadly interested in robot learning and manipulation — tactile sensing for manipulation
+          among other things — and I am still exploring which problems to commit to.
         </p>
         <p>
           I received my M.S. in Artificial Intelligence from National Yang Ming Chiao Tung University (NYCU)
@@ -57,12 +56,13 @@
       <td style="padding:2.5%;width:100%;vertical-align:middle">
         <h2>Research</h2>
         <p>
-          A thread running through my work is inferring hidden physical state from indirect observations —
-          indoor position from Wi-Fi signals in my M.S. work, and object and dynamics parameters from
-          interaction feedback in my current robot-learning work — and using that inference to make
-          manipulation robust under real-world uncertainty. I care about methods that hold up on real
-          robots, and I am broadly interested in policy learning for manipulation, including how sensing
-          beyond vision (e.g., touch) can be brought into the policy.
+          I don't have a single research thread yet. So far I have worked on generative models for Wi-Fi
+          fingerprint inpainting (M.S.), real-robot evaluation of video-based planning under partial
+          observability, and tactile representation learning for manipulation — in particular whether
+          gains at the perception level carry over to policy-level success. What I bring is a habit from
+          firmware and embedded ML: I like owning the full stack — hardware, data collection, evaluation —
+          and finding out what actually holds up on a real robot. I am broadly interested in robot learning
+          for manipulation and open to where the problems lead.
         </p>
       </td>
     </tr></table>
@@ -84,9 +84,11 @@
           <br><em>Under review at CoRL 2026</em>
           <br><a href="https://arxiv.org/abs/2510.17315">arXiv</a>
           <p></p>
-          <p>An adaptive video-based planning system that incorporates interaction-time feedback to handle
-          uncertainty: refining its latent state representation and filtering out failed plans, it adapts
-          without explicitly modeling hidden parameters. I led all real-world robot experiments.</p>
+          <p>A video-planning framework that feeds interaction-time data back into planning: it updates
+          model parameters online and filters out previously failed plans, so the planner adapts in
+          partially observed environments without explicitly modeling the unknown state variables.
+          I led the real-world robot experiments in the CoRL submission (the arXiv v1 is an earlier,
+          simulation-only version).</p>
         </td>
       </tr>
       <tr>
@@ -100,8 +102,12 @@
           <br><em>IEEE ICCCN 2024</em>
           <br><a href="https://arxiv.org/abs/2407.18915">arXiv</a>
           <p></p>
-          <p>Zero-shot Wi-Fi fingerprint inpainting with a shared-weight GAN discriminator, improving indoor
-          positioning accuracy by 20% over benchmarks and deployed in an industrial collaboration.</p>
+          <p>Filling in Wi-Fi fingerprints for unsurveyed regions so RSS-based indoor positioning works
+          where site surveys are incomplete. Unlike image inpainting, field maps have arbitrary shapes and
+          continuous query points, so we train directly on the given map: a GPR+VAE model (IAP) and a
+          fully learned model (I2AP) that captures both inter- and intra-AP correlations, with a
+          conditional-GAN discriminator on (location, fingerprint) pairs. I2AP outperforms GPR-based
+          inpainting in both interior and outward-missing scenarios and improves positioning accuracy.</p>
         </td>
       </tr>
     </table>
