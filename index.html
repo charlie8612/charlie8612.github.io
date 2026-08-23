@@ -5,7 +5,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="Yu (Charlie) Chan">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yu (Charlie) Chan — tactile representation learning and robot manipulation. Research Assistant, Robot Learning Lab, National Taiwan University.">
+  <meta name="description" content="Yu (Charlie) Chan — robot learning and manipulation under real-world uncertainty. Research Assistant, Robot Learning Lab, National Taiwan University.">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <style>
     a{color:#1772d0;text-decoration:none}
@@ -30,11 +30,13 @@
           <strong>Seeking PhD position for 2027 Fall!</strong>
           I am a research assistant at the <a href="https://rll.netlify.app/">Robot Learning Lab</a>,
           National Taiwan University, advised by <a href="https://shaohua0116.github.io/">Prof. Shao-Hua Sun</a>.
-          I am interested in tactile representation learning, robot manipulation, and robot learning.
+          I am interested in robot learning and manipulation — in particular, how robots can act
+          robustly when the physical state that matters (contact, object properties, dynamics) is not
+          directly observable.
         </p>
         <p>
-          I received my M.S. in Artificial Intelligence from National Yang Ming Chiao Tung University
-          (Presidential Award), advised by <a href="https://sites.google.com/view/yctseng">Prof. Yu-Chee Tseng</a>
+          I received my M.S. in Artificial Intelligence from National Yang Ming Chiao Tung University (NYCU)
+          with the Presidential Award, advised by <a href="https://sites.google.com/view/yctseng">Prof. Yu-Chee Tseng</a>
           and Prof. Jen-Jee Chen. Before returning to research, I spent three years in industry —
           Wi-Fi firmware at MediaTek and embedded ML at Novatek — and co-founded
           <a href="https://terathinker.com/">Tera Thinker</a>, an AI education startup.
@@ -55,10 +57,12 @@
       <td style="padding:2.5%;width:100%;vertical-align:middle">
         <h2>Research</h2>
         <p>
-          I infer hidden physical state from indirect, non-visual sensing — Wi-Fi signals in my earlier work,
-          touch now — and use that inference to make robot manipulation robust under real-world uncertainty.
-          My current question: do the perception-level gains reported in tactile representation learning
-          actually survive to the policy level?
+          A thread running through my work is inferring hidden physical state from indirect observations —
+          indoor position from Wi-Fi signals in my M.S. work, and object and dynamics parameters from
+          interaction feedback in my current robot-learning work — and using that inference to make
+          manipulation robust under real-world uncertainty. I care about methods that hold up on real
+          robots, and I am broadly interested in policy learning for manipulation, including how sensing
+          beyond vision (e.g., touch) can be brought into the policy.
         </p>
       </td>
     </tr></table>
@@ -125,18 +129,18 @@
         </p>
         <p>
           <h3>3D printing &amp; fabrication.</h3>
-          Designed and fabricated the physical experimental setups for the lab's real-robot research —
-          custom fixtures, mounts, and task objects for the CoRL 2026 submission's experiments, and a
-          custom stiffness tester for the Piper gripper.
-          Published designs on MakerWorld:
-          <a href="https://makerworld.com/zh/models/3203932-stiffness-tester-piper-arm">Stiffness Tester (Piper Arm)</a> and
-          <a href="https://makerworld.com/zh/models/3200034-cube-earring">Cube Earring</a>.
+          I design and fabricate the physical side of the lab's real-robot experiments — custom fixtures,
+          mounts, and task objects for the CoRL 2026 submission, and a
+          <a href="https://makerworld.com/zh/models/3203932-stiffness-tester-piper-arm">stiffness tester for the Piper gripper</a>
+          (published on MakerWorld). I also design for fun outside the lab; the
+          <a href="https://makerworld.com/zh/models/3200034-cube-earring">Cube Earring</a> is one of my personal
+          MakerWorld designs.
         </p>
         <p style="text-align:center">
           <a href="https://makerworld.com/zh/models/3203932-stiffness-tester-piper-arm"><img src="images/fab-stiffness.jpg" alt="3D-printed stiffness tester for the Piper gripper" style="width:23%;max-width:170px;vertical-align:middle;border-radius:3px;margin:0 0.5%"></a>
-          <a href="https://makerworld.com/zh/models/3200034-cube-earring"><img src="images/fab-earring.jpg" alt="Cube Earring design on MakerWorld" style="width:23%;max-width:170px;vertical-align:middle;border-radius:3px;margin:0 0.5%"></a>
           <img src="images/fab-objects.jpg" alt="3D-printed task objects for manipulation experiments" style="width:23%;max-width:170px;vertical-align:middle;border-radius:3px;margin:0 0.5%">
           <img src="images/fab-env.jpg" alt="crafted experiment environment with the Piper arm" style="width:23%;max-width:170px;vertical-align:middle;border-radius:3px;margin:0 0.5%">
+          <a href="https://makerworld.com/zh/models/3200034-cube-earring"><img src="images/fab-earring.jpg" alt="Cube Earring — a personal design on MakerWorld" style="width:23%;max-width:170px;vertical-align:middle;border-radius:3px;margin:0 0.5%"></a>
         </p>
         <p style="text-align:center">
           <video src="videos/stiffness-test.mp4" poster="images/stiffness-test-poster.jpg" controls muted loop playsinline preload="none" style="width:47%;max-width:340px;vertical-align:middle;border-radius:3px;margin:0 0.5%" aria-label="Piper arm running the 3D-printed stiffness tester"></video>
@@ -186,7 +190,8 @@
       <td style="padding:2.5%;width:100%;vertical-align:middle">
         <h2>Education</h2>
         <p>
-          M.S. in Artificial Intelligence, National Yang Ming Chiao Tung University (2020&ndash;2022) —
+          M.S. in Artificial Intelligence, National Yang Ming Chiao Tung University
+          (NYCU; formerly National Chiao Tung University) (2020&ndash;2022) —
           GPA 4.26/4.30, Presidential Award; exchange semester at University of Agder, Norway (Spring 2022)<br>
           B.S. in Electrical Engineering and Computer Science, National Tsing Hua University (2015&ndash;2019)
         </p>
